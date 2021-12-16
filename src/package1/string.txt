@@ -1,0 +1,13 @@
+In Java, strings are objects of the String class and represent a sequence of characters.
+
+The String class is immutable, meaning once a String object is created, it cannot be changed.
+
+However, the String class provides several methods that appear to modify strings.
+
+These methods actually create and return a new string that contains the result of the operation.
+
+When a string is created the stack will store the value of the string literal that points to the string object in the pool inside the heap.
+
+(When we declare a String literal, the JVM creates the object in the pool and stores its reference on the stack. Before creating each String object in memory, the JVM performs some steps to decrease the memory overhead.)
+
+The String constant pool uses a Hashmap in its implementation. Each bucket of the Hashmap contains a list of Strings with the same hash code. 
